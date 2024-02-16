@@ -16,14 +16,16 @@ namespace ConsoleApp8
             int priceUnitCrystal = 10;
             int remainingGold;
 
-            Console.WriteLine("Добро пожаловать в наш магазин кристаллов.Сегодня кристаллы по " + priceUnitCrystal + " золота.");
-            Console.Write("Скажите, сколько у вас золота: ");
+            Console.WriteLine("Добро пожаловать в наш магазин кристаллов."); 
+            Console.Write( "Скажите, сколько у вас золота: ");
             gold = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Сегодня в продаже кристаллы по " + priceUnitCrystal + " золота.");
             Console.Write("Скажите, сколько кристаллов вы хотите купить: "); 
             crystals = Convert.ToInt32(Console.ReadLine());
 
-            remainingGold = gold - crystals * priceUnitCrystal;
-            Console.WriteLine($"У вас теперь кристаллов {crystals}, остатаок золотв {remainingGold}. Приятно было иметь с вами дело!");
+            gold = gold - crystals * priceUnitCrystal;
+            Console.WriteLine($"У вас теперь кристаллов {crystals}, остатаок золотв {gold}. Приятно было иметь с вами дело!");
         }
     }
 }
